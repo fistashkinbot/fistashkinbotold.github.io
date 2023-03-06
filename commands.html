@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta data-n-head='ssr' charset="utf-8">
+    <meta data-n-head='ssr' name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Head Information -->
+    <title>Команды - FistashkinBot</title>
+    <link data-n-head='ssr' rel='icon' type='image/x-icon' href='assets/fistashkin.ico'>
+
+    <!-- Styles -->
+    <link type='text/css' rel='stylesheet' href='styles/utilities.css'>
+    <link type='text/css' rel='stylesheet' href='styles/common.css'>
+    <link type='text/css' rel='stylesheet' href='styles/commands.css'>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous">
+
+    <!-- Meta -->
+    <meta data-n-head='ssr' data-hid='theme-color' name='theme-color' content='#a53143'>
+    <meta data-n-head='ssr' data-hid='og:type' name='og:type' content='website'>
+    <meta data-n-head='ssr' data-hid='og:title' name='og:title' content='Команды - FistashkinBot'>
+    <meta data-n-head='ssr' data-hid='og:url' name='og:url' content='https://fistashkinbot.com/commands.html'>
+    <meta data-n-head='ssr' data-hid='og:image' name='og:image'
+        content='https://fistashkinbot.com/assets/fistashkin.png'>
+    <meta data-n-head='ssr' data-hid='description' name='description'
+        content='Просмотрите все команды Фисташкина в одном месте. За исключением самого бота, это самый актуальный список, который вы можете найти!'>
+    <meta data-n-head='ssr' data-hid='og:description' name='og:description'
+        content='Fistashkin это многоцелевой дискорд-бот. Создан с любовью и развлечением, чтобы ваши участники Discord были заняты и активны. Но это не останавливается на достигнутом...'>
+
+</head>
+
+<body style='background-color: #141518'>
+    <!-- Preloader -->
+
+    <body class='preload'></body>
+
+    <!-- Header -->
+    <div class='navbar'>
+        <div class='container full flex'>
+            <a href='index.html' class='logo flex'>
+                <img src='assets//fistashkin.png' alt='Fistashkin Logo'>
+                <p class='title'>FistashkinBot</p>
+            </a>
+            <nav>
+                <ul>
+                    <li><a class='button' href='docs.html'><span>FAQ</span></a></li>
+                    <li><a class='button currentPage' href='commands.html'><span>Команды</span></a></li>
+                    <li><a class='button' href='invite.html'><span>Пригласить бота</span></a></li>
+                    <li><a class='button' href='support.html'><span>Поддержка</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Notes -->
+    <div class='notes card'>
+        <div class='container full grid'>
+            <div class='commandPrefix'>
+                <h2>Префикс команд</h2>
+                <div class='flex'>
+                    <p>Стандартный префикс: </p>
+                    <pre><code> f! </code></pre>
+                </div>
+                <div class='flex pop'>
+                    <p>Упоминание участников: </p>
+                    <pre><code> @FistashkinBot#0653 </code></pre>
+                </div>
+                <div class='flex'>
+                    <p>Пример текстовых и слеш команд: </p>
+                    <pre><code> f!хелп | /хелп </code></pre>
+                </div>
+            </div>
+            <div class='commandSyntax'>
+                <h2>Синтаксис команд</h2>
+                <p><i>(Пожалуйста, не включайте их при вводе команд)</i></p>
+
+                <div class='flex'>
+                    <pre><code> [] </code></pre>
+                    <p>- Необязательный параметр</p>
+                </div>
+                <div class='flex'>
+                    <pre><code> <> </code></pre>
+                    <p>- Обязательный параметр</p>
+                </div>
+                <div class='flex pop'>
+                    <pre><code> < вариант1 || вариант2 > </code></pre>
+                    <p>- Выберите вариант внутри</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Commands -->
+    <div class='category flex'>
+        <div class='container full accordion'>
+            <div class='card commands'>
+                <div id='InfoContainer'>
+                    <input type='checkbox' id='info' class='accordion_input'>
+                    <label for='info' class='accordion_label'>📚 Информация</label>
+                    <div class='content accordion'>
+                        <div class='card'>
+                            <input type='checkbox' id='help' class='accordion_input'>
+                            <label for='help' class='accordion_label'>Хелп</label>
+                            <div class='content'>
+                                <p>Показывает список доступных команд бота.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>хелп</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>хелп</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='userinfo' class='accordion_input'>
+                            <label for='userinfo' class='accordion_label'>Юзер</label>
+                            <div class='content'>
+                                <p>Показывает информацию об участнике.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>юзер [ Участник ]</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>хелп @User#9999</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='serverinfo' class='accordion_input'>
+                            <label for='serverinfo' class='accordion_label'>Сервер</label>
+                            <div class='content'>
+                                <p>Показывает информацию о сервере.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>сервер</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>сервер</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='avatar' class='accordion_input'>
+                            <label for='avatar' class='accordion_label'>Аватар</label>
+                            <div class='content'>
+                                <p>Показывает аватар упомянутого участника или участника, вызвавшего команду.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>аватар [ Участник ]</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>аватар @Riverya4life#9515</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='roles' class='accordion_input'>
+                            <label for='roles' class='accordion_label'>Роли</label>
+                            <div class='content'>
+                                <p>Показывает все роли сервера.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>роли</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>роли</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='fistashkininfo' class='accordion_input'>
+                            <label for='fistashkininfo' class='accordion_label'>Инфо</label>
+                            <div class='content'>
+                                <p>Показывает интересную информацию о боте.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>инфо</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>инфо</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='fistashkinstat' class='accordion_input'>
+                            <label for='fistashkinstat' class='accordion_label'>Стат</label>
+                            <div class='content'>
+                                <p>Показывает статистику бота.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>стат</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>стат</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='fistashkinfaq' class='accordion_input'>
+                            <label for='fistashkinfaq' class='accordion_label'>Вопрос</label>
+                            <div class='content'>
+                                <p>Смотрите наиболее часто задаваемые вопросы.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>вопрос < вариант 1 || вариант 2 ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>вопрос 💨 Как добавить бота на свой сервер?</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id='ModerationContainer'>
+                    <input type='checkbox' id='moderation' class='accordion_input'>
+                    <label for='moderation' class='accordion_label'>🏆 Модерирование</label>
+                    <div class='content accordion'>
+                        <div class='card'>
+                            <input type='checkbox' id='mute' class='accordion_input'>
+                            <label for='mute' class='accordion_label'>Мьют</label>
+                            <div class='content'>
+                                <p>Отправляет участника подумать о своём поведении.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>мьют < Участник > < Время (10м, 1ч) > [ Причина ]</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>мьют @Mee6#4876 1ч нарушает правила</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Требуемые разрешения: </h4>
+                                    <pre><code>Отправить участников подумать о своём поведении</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='unmute' class='accordion_input'>
+                            <label for='unmute' class='accordion_label'>РазМьют</label>
+                            <div class='content'>
+                                <p>Снимает наказание с участника.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>размьют < Участник > [ Причина ]</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>размьют @Mee6#4876 извинился</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Требуемые разрешения: </h4>
+                                    <pre><code>Отправить участников подумать о своём поведении</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='ban' class='accordion_input'>
+                            <label for='ban' class='accordion_label'>Бан</label>
+                            <div class='content'>
+                                <p>Изгоняет указанного участника с сервера навсегда.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>бан < Участник > [ Причина ]</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>бан @Mee6#4876 нарушает правила</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Требуемые разрешения: </h4>
+                                    <pre><code>Банить участников</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='unban' class='accordion_input'>
+                            <label for='unban' class='accordion_label'>РазБан</label>
+                            <div class='content'>
+                                <p>Разбанивает указанного участника на сервере по его ID, имени или тегу.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>разбан < Участник > [ Причина ]</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>разбан @Mee6#4876 помилован</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Требуемые разрешения: </h4>
+                                    <pre><code>Банить участников</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='kick' class='accordion_input'>
+                            <label for='kick' class='accordion_label'>Кик</label>
+                            <div class='content'>
+                                <p>Изгоняет указанного участника с сервера с возможностью возвращения.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>кик < Участник > [ Причина ]</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>кик @Mee6#4876 оскорбляет всех</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Требуемые разрешения: </h4>
+                                    <pre><code>Кикать участников</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='purge' class='accordion_input'>
+                            <label for='purge' class='accordion_label'>Очистить</label>
+                            <div class='content'>
+                                <p>Очищает определенное количество сообщений в канале.</i>)</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>очистить < Количество ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>очистить 100</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Требуемые разрешения: </h4>
+                                    <pre><code>Управлять сообщениями</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='mute' class='accordion_input'>
+                            <label for='mute' class='accordion_label'>Мьют</label>
+                            <div class='content'>
+                                <p>Отправляет участника подумать о своём поведении.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>мьют < Участник > < Время > [ Причина ]</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>мьют @Riverya4life#9515 30м Пинги</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Требуемые разрешения: </h4>
+                                    <pre><code>Модерировать участников</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='createrole' class='accordion_input'>
+                            <label for='createrole' class='accordion_label'>Создать Роль</label>
+                            <div class='content'>
+                                <p>Создание роли на сервере.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>создатьроль < Название > < Цвет ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>создатьроль @Admin #dc4747</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Требуемые разрешения: </h4>
+                                    <pre><code>Администратор</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='giverole' class='accordion_input'>
+                            <label for='giverole' class='accordion_label'>Выдать Роль</label>
+                            <div class='content'>
+                                <p>Выдает указанную роль участнику.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>выдатьроль < Участник > < Роль ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>выдатьроль @Riverya4life#9515 @Admin</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Требуемые разрешения: </h4>
+                                    <pre><code>Администратор</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='ungiverole' class='accordion_input'>
+                            <label for='ungiverole' class='accordion_label'>Снять Роль</label>
+                            <div class='content'>
+                                <p>Снимает указанную роль участнику.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>снятьроль < Участник > < Роль ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>снятьроль @Riverya4life#9515 @Admin</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Требуемые разрешения: </h4>
+                                    <pre><code>Администратор</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='clist' class='accordion_input'>
+                            <label for='clist' class='accordion_label'>Клист</label>
+                            <div class='content'>
+                                <p>Выводит список участников с определенной ролью.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>клист < Роль ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>клист @Admin</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Требуемые разрешения: </h4>
+                                    <pre><code>Администратор</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='channelwait' class='accordion_input'>
+                            <label for='channelwait' class='accordion_label'>Задержка</label>
+                            <div class='content'>
+                                <p>Устанавливает задержку на общение в чате.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>задержка < Секунды ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>задержка 10</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Требуемые разрешения: </h4>
+                                    <pre><code>Администратор</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id='EconomyContainer'>
+                    <input type='checkbox' id='economy' class='accordion_input'>
+                    <label for='economy' class='accordion_label'>🍃 Экономика</label>
+                    <div class='content accordion'>
+                        <div class='card'>
+                            <input type='checkbox' id='balance' class='accordion_input'>
+                            <label for='balance' class='accordion_label'>Баланс</label>
+                            <div class='content'>
+                                <p>Показывает баланс участника или участника, вызвавшего команду.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>баланс [ Участник ]</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>баланс @Fistashkin#0653</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='paymoney' class='accordion_input'>
+                            <label for='paymoney' class='accordion_label'>Перевести</label>
+                            <div class='content'>
+                                <p>Перевеводит деньги участнику.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>перевести < Участник> < Сумма ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>перевести @Fistashkin#0653 100</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='buyrole' class='accordion_input'>
+                            <label for='buyrole' class='accordion_label'>Купить Роль</label>
+                            <div class='content'>
+                                <p>Покупка роли с магазина ролей.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>купитьроль < Роль ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>купитьроль @Admin</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='roleshop' class='accordion_input'>
+                            <label for='roleshop' class='accordion_label'>Магазин</label>
+                            <div class='content'>
+                                <p>Магазин, в котором можно покупать роли.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>магазин</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>магазин</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='leaderboard' class='accordion_input'>
+                            <label for='leaderboard' class='accordion_label'>Лидеры</label>
+                            <div class='content'>
+                                <p>Показывает топ рейтинга участников по балансу.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>лидеры</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>лидеры</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='bonus' class='accordion_input'>
+                            <label for='bonus' class='accordion_label'>Бонус</label>
+                            <div class='content'>
+                                <p>Выдаёт бонус участнику.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>бонус</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>бонус</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='slotmachine' class='accordion_input'>
+                            <label for='slotmachine' class='accordion_label'>Слот Машина</label>
+                            <div class='content'>
+                                <p>Игра в слот машину.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>слот < Сумма 10-150 ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>слот 150</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id='FunContainer'>
+                    <input type='checkbox' id='fun' class='accordion_input'>
+                    <label for='fun' class='accordion_label'>🎮 Развлечения</label>
+                    <div class='content accordion'>
+                        <div class='card'>
+                            <input type='checkbox' id='8ball' class='accordion_input'>
+                            <label for='8ball' class='accordion_label'>Шар</label>
+                            <div class='content'>
+                                <p>Отвечает на вопрос участника.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>шар < Вопрос ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>шар Ты бот?</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='ping' class='accordion_input'>
+                            <label for='ping' class='accordion_label'>Пинг</label>
+                            <div class='content'>
+                                <p>Проверка на работоспособность бота и задержки.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>пинг</code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>пинг</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='calculator' class='accordion_input'>
+                            <label for='calculator' class='accordion_label'>Калькулятор</label>
+                            <div class='content'>
+                                <p>+ (сложить), - (вычесть), / (поделить), * (умножить) ** (возвести в степень), % (остаток от деления)'</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>калькулятор < 1 Число > < Оператор > < 2 Число ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>калькулятор 5014 + 956</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='kissing' class='accordion_input'>
+                            <label for='kissing' class='accordion_label'>Поцеловать</label>
+                            <div class='content'>
+                                <p>Поцеловать участника.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>поцеловать < Участник ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>поцеловать @Riverya4life#9515</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='embrace' class='accordion_input'>
+                            <label for='embrace' class='accordion_label'>Обнять</label>
+                            <div class='content'>
+                                <p>Обнять участника.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>обнять < Участник ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>обнять @Riverya4life#9515</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='slap' class='accordion_input'>
+                            <label for='slap' class='accordion_label'>Шлепнуть</label>
+                            <div class='content'>
+                                <p>Шлепнуть участника.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>шлепнуть < Участник ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>шлепнуть @Riverya4life#9515</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='beat' class='accordion_input'>
+                            <label for='beat' class='accordion_label'>Ударить</label>
+                            <div class='content'>
+                                <p>Ударить участника.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>ударить < Участник ></code></pre>
+                                </div>
+                                <div class='flex usage'>
+                                    <h4>Пример: </h4>
+                                    <pre><code>ударить @Riverya4life#9515</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='dog' class='accordion_input'>
+                            <label for='dog' class='accordion_label'>Собака</label>
+                            <div class='content'>
+                                <p>Отправляет случайную картинку с собачкой.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>собака</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='panda' class='accordion_input'>
+                            <label for='panda' class='accordion_label'>Панда</label>
+                            <div class='content'>
+                                <p>Отправляет случайную картинку с пандой.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>панда</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='cat' class='accordion_input'>
+                            <label for='cat' class='accordion_label'>Кот</label>
+                            <div class='content'>
+                                <p>Отправляет случайную картинку с котом.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>кот</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <input type='checkbox' id='fox' class='accordion_input'>
+                            <label for='fox' class='accordion_label'>Лис</label>
+                            <div class='content'>
+                                <p>Отправляет случайную картинку с лисичкой.</p>
+                                <div class='flex usage'>
+                                    <h4>Использование: </h4>
+                                    <pre><code>лис</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class='footer'>
+        <div class='container full grid'>
+            <div class='branding'>
+                <h4>FistashkinBot</h4>
+                <p>Copyright &copy; 2022 - 2023 Riverya4life</p>
+            </div>
+            <div class='flex'>
+                <div class='footernav'>
+                    <ul>
+                        <li><a class='button' href='index.html'><span>На главную</span></a></li>
+                        <li><a class='button' href='commands.html'><span>Команды</span></a></li>
+                        <li><a class='button' href='docs.html'><span>Информация</span></a></li>
+                    </ul>
+                </div>
+                <div class='footernav'>
+                    <ul>
+                        <li><a class='button' href='support.html'><span>Сервер поддержки</span></a></li>
+                        <li><a class='button' href='invite.html'><span>Пригласить Фисташкина</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script>$(window).load(function () { 'body'.removeClass('.preload'); });</script>
+</body>
+
+</html>
